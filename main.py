@@ -6,6 +6,8 @@ from constants import *  # noqa: F403
 def main():
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))  # noqa: F405
+    dt = 0
+    clock = pygame.time.Clock()
 
     running = True
     while running:
@@ -18,6 +20,7 @@ def main():
 
         # Update the display
         pygame.display.flip()
+        de = clock.tick(60) / 1000
 
 
 if __name__ == "__main__":
